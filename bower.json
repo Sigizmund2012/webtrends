@@ -1,0 +1,27 @@
+{
+  "name": "wetrends",
+  "description": "Test task from Webtrends",
+  "main": "index.js",
+  "authors": [
+    "Smartfreelancer"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  }
+}
