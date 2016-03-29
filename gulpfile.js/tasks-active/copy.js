@@ -21,4 +21,9 @@ gulp.task( 'copy-img', function () {
 		.pipe( gulp.dest( config.img.dest ) );
 } );
 
+gulp.task( 'copy-fonts', function () {
+	return gulp.src( config.fonts.src )
+		.pipe( gulp.dest( config.fonts.dest ) );
+} );
+
 gulp.task( 'copy-all', [ 'copy-bootstrap', 'copy-html', 'copy-js', 'copy-img' ] );

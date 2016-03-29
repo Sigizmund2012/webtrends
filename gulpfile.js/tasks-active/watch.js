@@ -2,7 +2,7 @@ var gulp = require( 'gulp' );
 var browserSync = require( 'browser-sync' );
 var config = require('../../gulpconfig').watch;
 
-gulp.task('serve', ['styles', 'copy-html', 'copy-js', 'copy-img'], function() {
+gulp.task('serve', ['styles', 'copy-html', 'copy-js', 'copy-img', 'copy-fonts'], function() {
 
 	browserSync.init({
 		server: config.server
@@ -12,8 +12,10 @@ gulp.task('serve', ['styles', 'copy-html', 'copy-js', 'copy-img'], function() {
 	gulp.watch( config.html, ['copy-html']);
 	gulp.watch( config.js, ['copy-js']);
 	gulp.watch( config.img, ['copy-img']);
+	gulp.watch( config.fonts, ['copy-fonts']);
 	gulp.watch( config.browsersync.html ).on('change', browserSync.reload);
 	gulp.watch( config.browsersync.css ).on('change', browserSync.reload);
 	gulp.watch( config.browsersync.js ).on('change', browserSync.reload);
 	gulp.watch( config.browsersync.img ).on('change', browserSync.reload);
+	gulp.watch( config.browsersync.fonts ).on('change', browserSync.reload);
 });

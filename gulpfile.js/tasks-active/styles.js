@@ -6,6 +6,6 @@ var gulp = require('gulp'),
 gulp.task( 'styles', function () {
 	return gulp.src( config.src )
 		.pipe( sass() )
-		.pipe( autoprefixer() )
+		.pipe( autoprefixer( config.autoprefixer ) )
 		.pipe( gulp.dest( config.dest ) );
 } );
