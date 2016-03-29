@@ -1,32 +1,33 @@
-@import "bootstrap/stylesheets/bootstrap";
+@import "bootstrap/stylesheets/bootstrap-custom";
 
 html,
-body{
+body {
   width: 100%;
   height: 100%;
   font-family: "Times New Roman", Times, serif;
 }
 
+/* Header */
 
-.main-heading{
+.main-heading {
   margin: 3% 0 0;
   &,
-  &__second-line{
+  &__second-line {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
     font-size: 30px;
   }
-  &__shop{
+  &__shop {
     color: #c1221b;
   }
 }
 
-.header-description{
+.header-description {
   margin: 45% 0 5%;
   text-align: center;
   color: #fff;
-  &__five-days{
+  &__five-days {
     display: inline-block;
     width: 29px;
     height: 29px;
@@ -35,7 +36,7 @@ body{
     margin: 0 8px;
   }
   &__link,
-  &__download{
+  &__download {
     display: inline-block;
     margin: 0 15px;
     border-radius: 100%;
@@ -44,11 +45,70 @@ body{
     vertical-align: middle;
     background-size: cover;
   }
-  &__link{
+  &__link {
     background: url("../img/demo-link.png") center no-repeat;
   }
-  &__download{
+  &__download {
     background: url("../img/download.png") center no-repeat;
+  }
+}
+
+/* Article */
+
+article {
+  padding: 75px 0;
+}
+
+.shop-pages {
+  width: 100%;
+  height: auto;
+}
+
+.suitable-offer {
+  font-size: 18px;
+  color: #302d2e;
+  &__heading {
+    color: #302c2d;
+    font-size: 20px;
+    margin: 0 0 0 94px;
+    padding: 0;
+  }
+  &__elem {
+    margin: 55px 0 0 64px;
+    padding: 0 0 0 30px;
+    position: relative;
+  }
+  &_first-line {
+    color: #da3039;
+    display: block;
+    margin: 0 0 15px;
+  }
+  &_paper-airplane:before,
+  &_niche:before,
+  &_deadline:before {
+    content: "";
+    width: 64px;
+    position: absolute;
+    left: -64px;
+    top: 10px;
+  }
+  &_paper-airplane {
+    &:before {
+      height: 56px;
+      background: url("../img/paper-airplane.png") center no-repeat;
+    }
+  }
+  &_niche {
+    &:before {
+      height: 65px;
+      background: url("../img/parts.png") center no-repeat;
+    }
+  }
+  &_deadline {
+    &:before {
+      height: 61px;
+      background: url("../img/clock.png") center no-repeat;
+    }
   }
 }
 
@@ -57,55 +117,79 @@ body{
 // Phones
 @media (max-width: $screen-xs-max) {
   /* Header */
-  .header-wrapper{
+  .header-wrapper {
     background: url("../img/header-bg-phones.jpg") center no-repeat;
     background-size: cover;
   }
-  .main-heading{
+  .main-heading {
     &,
-    &__second-line{
+    &__second-line {
       font-size: 18px;
     }
   }
-  .header-description{
+  .header-description {
     margin: 55% 0 3%;
     &__link,
-    &__download{
+    &__download {
       width: 45px;
       height: 45px;
     }
-    &__link{
+    &__link {
       margin: 0 0 0 15px;
     }
-    &__download{
+    &__download {
       margin: 0 15px 0 0;
     }
-    &_low-resolution{
+    &_low-resolution {
       display: block;
     }
   }
+  /* Article */
+  .suitable-offer {
+    &__heading {
+      margin: 0;
+      text-align: center;
+    }
+    &__elem {
+      margin: 20px 0 0 64px;
+    }
+  }
 }
+
 // Tablets
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
   /* Header */
-  .header-wrapper{
+  .header-wrapper {
     background: url("../img/header-bg-tablets.jpg") center no-repeat;
     background-size: cover;
+  }
+  /* Article */
+  .suitable-offer {
+    &__elem {
+      margin: 20px 0 0 64px;
+    }
   }
 }
 
 // Notebooks
-@media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
   /* Header */
-  .header-wrapper{
+  .header-wrapper {
     background: url("../img/header-bg-notebooks.jpg") center no-repeat;
     background-size: cover;
   }
+  /* Article */
+  .suitable-offer {
+    &__elem {
+      margin: 30px 0 0 64px;
+    }
+  }
 }
+
 // Desktop
 @media (min-width: $screen-lg-min) {
   /* Header */
-  .header-wrapper{
+  .header-wrapper {
     background: url("../img/header-bg.jpg") center no-repeat;
     background-size: cover;
   }
