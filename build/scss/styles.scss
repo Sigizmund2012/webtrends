@@ -113,6 +113,77 @@ article {
   }
 }
 
+.stop-solution{
+  background-color: #f3f3f3;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-top: 40px;
+  &__heading{
+    font-size: 24px;
+    color: #161616;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+  &__description{
+    font-size: 16px;
+    text-align: center;
+    color: #da3039;
+  }
+  &__position{
+    margin-top: 65px;
+  }
+  &__icon{
+    width: 75px;
+    height: 70px;
+    margin: auto;
+  }
+  &__goodies{
+    margin-top: 25px;
+    color: #151515;
+    text-align: center;
+    font-size: 14px;
+  }
+  &_electronics{
+    background: url("../img/electronics.png") center no-repeat;
+  }
+  &_clothes{
+    background: url("../img/clothes.png") center no-repeat;
+  }
+  &_constr-materials{
+    background: url("../img/constr_materials.png") center no-repeat;
+  }
+  &_interier{
+    background: url("../img/cup.png") center no-repeat;
+  }
+  &_tools{
+    background: url("../img/tools.png") center no-repeat;
+  }
+  &_cosmetic{
+    background: url("../img/cosmetic.png") center no-repeat;
+  }
+  &_pick-out{
+    font-weight: bold;
+  }
+}
+
+/* Footer */
+
+footer{
+  background: url("../img/footer-texture.jpg");
+}
+
+.web-trends{
+  &__logo{
+    width: 52px;
+    height: 52px;
+    background: url("../img/wt-logo.jpg") center no-repeat;
+    float: left;
+  }
+}
+
 /* Media-queries */
 
 // Phones
@@ -125,11 +196,11 @@ article {
   .main-heading {
     &,
     &__second-line {
-      font-size: 18px;
+      font-size: 12px;
     }
   }
   .header-description {
-    margin: 55% 0 3%;
+    margin: 65% 0 3%;
     &__link,
     &__download {
       width: 45px;
@@ -153,6 +224,14 @@ article {
     }
     &__elem {
       margin: 20px 0 0 64px;
+    }
+  }
+  .stop-solution{
+    &__position{
+      margin-top: 20px;
+    }
+    &__goodies{
+      margin-top: 10px;
     }
   }
 }
